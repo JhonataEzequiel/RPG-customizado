@@ -1,7 +1,7 @@
 #include <iostream>
 #include <locale.h>
-#include <vector>
 #include <windows.h>
+#include <fstream>
 #include "jogador.h"
 #include "bancoDeDados.h"
 
@@ -14,15 +14,13 @@ void ApresentaMenu()
     cout << "2 - Criar Personagem\n" << endl;
     cout << "3 - Upar de Level\n" << endl;
     cout << "4 - Mostrar Dados do Personagem\n" << endl;
-    cout << "5 - Mostrar atributos básicos de cada raça\n" << endl;
+    cout << "5 - Mostrar atributos basicos de cada raca\n" << endl;
     cout << "6 - Curar-se\n" << endl;
     cout << "7 - Sair\n" << endl;
 }
 
 int main()
 {
-    setlocale (LC_ALL,"portuguese");
-
     jogador j1; bancoDeDados b1;
 
     j1 = b1.LerArquivo();
@@ -32,7 +30,7 @@ int main()
 
     while(op <= 0 || op > 7)
     {
-        cout << "Digite um número válido\n" << endl;
+        cout << "Digite um nÃºmero vÃ¡lido\n" << endl;
         cin >> op;
     }
 
@@ -58,7 +56,7 @@ int main()
 
         while(op <= 0 || op > 7)
         {
-            cout << "Digite um número válido\n" << endl;
+            cout << "Digite um numero valido\n" << endl;
             cin >> op;
         }
     }

@@ -153,12 +153,8 @@ void jogador::CriarPersonagem()
         vivo = true;
         raca = op2;
         cout << "Operação concluída!\n" << endl;
-        system("pause");
-        system("cls");
     }else{
         cout << "Operação abortada!\n" << endl;
-        system("pause");
-        system("cls");
     }
 }
 void jogador::consultarDadosRacas()
@@ -231,10 +227,11 @@ string jogador::toString()
     string atributos;
     atributos = Nome + "\n";
 
-    if(vivo)
-    atributos = atributos + "1" + "\n";
-    if(!vivo)
-    atributos = atributos + "0" + "\n";
+    if(vivo){
+        atributos = atributos + "1\n";
+    }else{
+        atributos = atributos + "0\n";
+    }
 
     atributos = atributos + to_string(raca) + "\n";
     atributos = atributos + to_string(vida) + "\n";

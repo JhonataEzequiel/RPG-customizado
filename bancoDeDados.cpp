@@ -3,15 +3,10 @@ using namespace std;
 
 void bancoDeDados::SalvarArquivo(jogador j1)
 {
-    if(j1.getVivo()){
-        ofstream ficheiroDeDadosSaida("Personagem.txt",ios::out|ios::trunc);
-        ficheiroDeDadosSaida << j1.toString();
-
-        ficheiroDeDadosSaida.close();
-        cout << "Arquivo Salvo!\n" << endl;
-    }else{
-        cout << "Personagem morto, arquivo não será salvo!\n" << endl;
-    }
+    ofstream ficheiroDeDadosSaida("Personagem.txt",ios::out|ios::trunc);
+    ficheiroDeDadosSaida << j1.toString();
+    ficheiroDeDadosSaida.close();
+    cout << "Arquivo Salvo!\n" << endl;
 }
 jogador bancoDeDados::LerArquivo()
 {
@@ -41,7 +36,12 @@ jogador bancoDeDados::toJogador(vector <string> conteudo)
         {
             case 0: j1.setNome(linhas); break;
             case 1: j1.setRaca(stoi(linhas)); break;
-            case 2: if(stoi(linhas))j1.setVivo(true); break;
+            case 2: if(stoi(linhas)){
+                        j1.setVivo(true);
+                    }else{
+                        j1.setVivo(false);
+                    }
+                    break;
             case 3: j1.setVida(stoi(linhas)); break;
             case 4: j1.setConstituicao(stoi(linhas)); break;
             case 5: j1.setForca(stoi(linhas)); break;
