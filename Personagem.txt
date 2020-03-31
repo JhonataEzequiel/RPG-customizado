@@ -1,0 +1,10 @@
+Nome: Marcus
+Status: Vivo
+Vida Maxima: 20
+Vida Atual: 30
+Constituicao: 4
+forca: 4
+destreza: 5
+carisma: 4
+sabedoria: 1
+inteligencia: 2
